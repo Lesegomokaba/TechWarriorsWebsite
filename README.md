@@ -41,10 +41,6 @@ The website consists of the following pages:
   - Email: techwarri@gmail.za  
   - Phone: 0742107161  
 
-
 ### Technologies Used
 - **HTML** – Structure of the website  
-- **CSS** – Styling  
-- **JavaScript** – Form interaction  
-- **GitHub** – Version control and project management  
-
+- **GitHub** – Version control and project management
