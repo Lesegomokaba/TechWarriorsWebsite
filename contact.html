@@ -1,39 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Tech Warriors - Contact Us</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* BACKGROUND IMAGE ADDED - Person typing on laptop and on a call (customer support / IT professional scene) */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        /* Semi-transparent overlay for text readability - does NOT change any original styles or content */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+        /* Ensures all original content remains visible above background - no style changes */
+        header, section, footer, .hero-about, .about-section, .about-container, .about-card, .logo, nav, ul, li, a, h1, h2, h3, p, div {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* MAKE ALL FONT WHITE IN EVERY SECTION EXCEPT email and phone number labels and values */
+        body, header, section, footer, .hero-about, .about-section, .about-container, .logo, nav, ul, li, a, h1, h2, h3, div {
+            color: #ffffff !important;
+        }
+
+        /* Keep links white with hover effect */
+        a {
+            color: #ffffff !important;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #ffaa00 !important;
+        }
+
+        /* Active navigation link styling */
+        nav ul li a.active {
+            color: #ffffff !important;
+            font-weight: bold;
+        }
+
+        /* Make Email Address heading (h3) and Phone Number heading (h3) inside about-card BLACK */
+        .about-card h3 {
+            color: #000000 !important;
+            background-color: rgba(255, 255, 255, 0.85);
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        /* Make email and phone number values (paragraphs) BLACK */
+        .about-card p {
+            color: #000000 !important;
+            background-color: rgba(255, 255, 255, 0.85);
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        /* Download button for the background image - discreet link at bottom right */
+        .bg-download-link {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            background: rgba(0,0,0,0.75);
+            color: white !important;
+            padding: 8px 14px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            z-index: 999;
+            backdrop-filter: blur(4px);
+            transition: 0.2s;
+            font-weight: bold;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        .bg-download-link:hover {
+            background: rgba(0,0,0,0.9);
+            color: #ffaa00 !important;
+        }
+    </style>
+
 </head>
+
 <body>
 
 <header>
-    <h1>Tech Warriors</h1>
+
+    <div class="logo">
+        <h1>Tech Warriors</h1>
+    </div>
+
+    <!-- Navigation -->
     <nav>
-        <a href="index.html">Home</a> |
-        <a href="about.html">About</a> |
-        <a href="services.html">Services</a> |
-        <a href="enquiry.html">Enquiry</a> |
-        <a href="contact.html">Contact</a>
+
+        <ul>
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="services.html">Services</a></li>
+
+            <li><a href="enquiry.html">Enquiry</a></li>
+
+            <li><a href="contact.html" class="active">Contact</a></li>
+
+        </ul>
+
     </nav>
+
 </header>
 
-<hr>
+<!-- Hero Section -->
 
-<section>
-    <h1 align="center">Contact Us</h1>
+<section class="hero-about">
 
-    <h2 align="center">Get In Touch</h2>
+    <h1>Contact Us</h1>
 
-    <p align="center"><b>Email:</b> techwarri@gmail.za</p>
-    <p align="center"><b>Phone:</b> 0742107161</p>
+    <p>
+        We are always ready to assist you with reliable IT solutions
+    </p>
+
 </section>
 
-<hr>
+<!-- Contact Section -->
 
-<footer align="center">
-    <p>© 2026 Tech Warriors IT | Reliable IT Solutions</p>
-    <p>Facebook | WhatsApp | Instagram</p>
+<section class="about-section">
+
+    <h2>Get In Touch</h2>
+
+    <div class="about-container">
+
+        <!-- Email Card -->
+
+        <div class="about-card">
+
+            <h3>Email Address</h3>
+
+            <p>
+                techwarri@gmail.za
+            </p>
+
+        </div>
+
+        <!-- Phone Card -->
+
+        <div class="about-card">
+
+            <h3>Phone Number</h3>
+
+            <p>
+                0742107161
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Additional Contact Information -->
+
+<section class="about-section">
+
+    <h2>Business Hours</h2>
+
+    <p>Monday - Friday : 08:00 AM - 05:00 PM</p>
+
+    <p>Saturday : 09:00 AM - 01:00 PM</p>
+
+    <p>Sunday : Closed</p>
+
+</section>
+
+
+<!-- Footer -->
+
+<footer>
+
+    <p>
+        © 2026 Tech Warriors IT |
+        Reliable IT Solutions
+    </p>
+
+    <p>
+        Facebook | WhatsApp | Instagram
+    </p>
+
 </footer>
 
+
 </body>
+
 </html>

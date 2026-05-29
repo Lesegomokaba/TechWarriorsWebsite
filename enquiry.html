@@ -1,67 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <title>Enquiry - Tech Warriors</title>
+
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Enquiry | Tech Warriors IT Solutions</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* BACKGROUND IMAGE ADDED - Person filling out a form (enquiry/application scene) */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        /* Semi-transparent overlay for readability - does NOT change any original styles or content */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+        /* Ensures all original content remains visible above background - no style changes */
+        header, main, section, footer, .hero-about, .enquiry-section, .form-container, .form-info, .form-box, .logo, nav, ul, li, a, h1, h2, h3, p, label, input, select, textarea, button, .btn, .checkbox-area {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* MAKE ALL TEXT WHITE ACROSS ALL SECTIONS - no other changes */
+        body, header, main, section, footer, .hero-about, .enquiry-section, .form-container, .form-info, .form-box, .logo, nav, ul, li, a, h1, h2, h3, p, label, .checkbox-area, .form-info ul li, .form-info p, .form-info h2, .form-info h3, .form-box h2, footer p {
+            color: #ffffff !important;
+        }
+
+        /* Keep links white but maintain any hover effects if they exist */
+        a {
+            color: #ffffff !important;
+        }
+
+        /* Style input fields, select, textarea to have white text but keep background readable */
+        input, select, textarea {
+            color: #ffffff !important;
+            background-color: rgba(50, 50, 50, 0.8);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        /* Style placeholder text to be slightly lighter white */
+        input::placeholder, textarea::placeholder {
+            color: rgba(255,255,255,0.7) !important;
+        }
+
+        /* Keep button text white */
+        button, .btn {
+            color: #ffffff !important;
+        }
+
+        /* Keep active navigation link style but ensure white text */
+        nav ul li a.active {
+            color: #ffffff !important;
+            font-weight: bold;
+        }
+
+        /* Download button for the background image - discreet link at bottom right, does not alter any original layout/content */
+        .bg-download-link {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            background: rgba(0,0,0,0.75);
+            color: white !important;
+            padding: 8px 14px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            z-index: 999;
+            backdrop-filter: blur(4px);
+            transition: 0.2s;
+            font-weight: bold;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        .bg-download-link:hover {
+            background: rgba(0,0,0,0.9);
+            color: #ffaa00 !important;
+        }
+    </style>
+
 </head>
+
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header>
-    <h2>Tech Warriors</h2>
+
+    <div class="logo">
+        <h1>Tech Warriors</h1>
+        <p>Affordable & Reliable IT Solutions</p>
+    </div>
+
+    <!-- Navigation -->
+
     <nav>
-        <a href="index.html">Home</a> |
-        <a href="about.html">About</a> |
-        <a href="services.html">Services</a> |
-        <a href="enquiry.html">Enquiry</a> |
-        <a href="contact.html">Contact</a>
+
+        <ul>
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="services.html">Services</a></li>
+
+            <li><a href="enquiry.html" class="active">Enquiry</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
     </nav>
+
 </header>
 
-<hr>
+<!-- ================= HERO SECTION ================= -->
 
-<section>
-    <h1 align="center">Enquiry Form</h1>
+<section class="hero-about">
 
-    <form action="#" method="post">
-        <p align="center">
-            Name:<br>
-            <input type="text" name="name" required>
-        </p>
+    <h1>Customer Enquiry Form</h1>
 
-        <p align="center">
-            Surname:<br>
-            <input type="text" name="surname" required>
-        </p>
+    <p>
+        Need assistance with IT support, networking, repairs, or digital solutions?
+        Send us your enquiry and our team will respond as soon as possible.
+    </p>
 
-        <p align="center">
-            Email:<br>
-            <input type="email" name="email" required>
-        </p>
-
-        <p align="center">
-            Phone Number:<br>
-            <input type="tel" name="phone" required>
-        </p>
-
-        <p align="center">
-            Message:<br>
-            <textarea name="message" rows="4" cols="30"></textarea>
-        </p>
-
-        <p align="center">
-            <button type="submit">Submit</button>
-        </p>
-    </form>
 </section>
 
-<br><br>
+<!-- ================= ENQUIRY SECTION ================= -->
 
-<hr>
+<section class="enquiry-section">
 
-<footer align="center">
-    <p>© 2026 Tech Warriors IT</p>
-    <p>Facebook | WhatsApp | Instagram</p>
+    <div class="form-container">
+
+        <!-- LEFT SIDE -->
+
+        <div class="form-info">
+
+            <h2>Why Choose Tech Warriors?</h2>
+
+            <p>
+                We provide professional and affordable IT services for students,
+                households, and businesses across South Africa.
+            </p>
+
+            <br>
+
+            <h3>Our Services Include:</h3>
+
+            <ul>
+
+                <li>Computer Repairs</li>
+
+                <li>Wi-Fi & Network Installation</li>
+
+                <li>Website Development</li>
+
+                <li>Software Installation</li>
+
+                <li>Technical Support</li>
+
+                <li>Cyber Security Assistance</li>
+
+            </ul>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="form-box">
+
+            <h2>Send Your Enquiry</h2>
+
+            <form action="#" method="post">
+
+                <!-- FULL NAME -->
+
+                <label for="fullname">Full Name</label>
+
+                <input type="text"
+                       id="fullname"
+                       name="fullname"
+                       placeholder="Enter your full name"
+                       required>
+
+                <!-- EMAIL -->
+
+                <label for="email">Email Address</label>
+
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="Enter your email address"
+                       required>
+
+                <!-- PHONE -->
+
+                <label for="phone">Phone Number</label>
+
+                <input type="tel"
+                       id="phone"
+                       name="phone"
+                       placeholder="Enter your phone number"
+                       required>
+
+                <!-- SERVICE -->
+
+                <label for="service">Select Service</label>
+
+                <select id="service" name="service" required>
+
+                    <option value="">Choose a service</option>
+
+                    <option>Computer Repair</option>
+
+                    <option>Networking</option>
+
+                    <option>Website Development</option>
+
+                    <option>Technical Support</option>
+
+                    <option>Software Installation</option>
+
+                </select>
+
+                <!-- MESSAGE -->
+
+                <label for="message">Message</label>
+
+                <textarea id="message"
+                          name="message"
+                          rows="6"
+                          placeholder="Type your enquiry here..."
+                          required></textarea>
+
+                <!-- CHECKBOX -->
+
+                <div class="checkbox-area">
+
+                    <input type="checkbox"
+                           id="terms"
+                           required>
+
+                    <label for="terms">
+                        I agree to the terms and conditions
+                    </label>
+
+                </div>
+
+                <!-- BUTTON -->
+
+                <button type="submit" class="btn">
+                    Submit Enquiry
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        © 2026 Tech Warriors IT Solutions |
+        Professional Technology Services
+    </p>
+
+    <p>
+        Facebook | WhatsApp | Instagram
+    </p>
+
 </footer>
 
 </body>
+
 </html>

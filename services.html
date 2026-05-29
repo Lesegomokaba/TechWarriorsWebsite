@@ -1,43 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Tech Warriors - Our Services</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* BACKGROUND IMAGE ADDED (person assisting someone) - NO OTHER CONTENT CHANGES */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        /* Semi-transparent overlay for text readability - does NOT change any original styles or content */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.65);
+            z-index: -1;
+        }
+
+        /* Ensures all original content remains visible above background - no style changes */
+        header, section, footer, .hero-about, .services-section, .services-container, .service-card, .about-section, .values-container, .value-box, .logo, nav, ul, li, a, h1, h2, h3, p, div {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Download button for background image - appears as a small discreet link, does not alter any original layout or content */
+        .bg-download-link {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 8px 14px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            z-index: 999;
+            backdrop-filter: blur(4px);
+            transition: 0.2s;
+            font-weight: bold;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        .bg-download-link:hover {
+            background: rgba(0,0,0,0.9);
+            color: #ffaa00;
+        }
+    </style>
+
 </head>
+
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header>
-    <h2>Tech Warriors</h2>
+
+    <div class="logo">
+
+        <h1>Tech Warriors</h1>
+
+        <p>Affordable & Reliable IT Solutions</p>
+
+    </div>
+
+    <!-- Navigation -->
+
     <nav>
-        <a href="index.html">Home</a> |
-        <a href="about.html">About</a> |
-        <a href="services.html">Services</a> |
-        <a href="enquiry.html">Enquiry</a> |
-        <a href="contact.html">Contact</a>
+
+        <ul>
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="services.html" class="active">Services</a></li>
+
+            <li><a href="enquiry.html">Enquiry</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
     </nav>
+
 </header>
 
-<hr>
+<!-- ================= HERO SECTION ================= -->
 
-<section>
-    <h1 align="center">Our Premium Services</h1>
+<section class="hero-about">
 
-    <div align="center">
-        <h3>Computer Repairs</h3>
-        <h3>Software Installation</h3>
-        <h3>Network Setup</h3>
-        <h3>Website Development</h3>
-    </div>
+    <h1>Our Premium Services</h1>
+
+    <p>
+        Professional technology services designed to help students,
+        businesses, and households succeed in the digital world.
+    </p>
+
 </section>
 
-<br><br>
+<!-- ================= SERVICES SECTION ================= -->
 
-<hr>
+<section class="services-section">
 
-<footer align="center">
-    <p>© 2026 Tech Warriors | Affordable IT Solutions for Everyone</p>
-    <p>Facebook | WhatsApp | Instagram</p>
+    <h2>What We Offer</h2>
+
+    <div class="services-container">
+
+        <!-- SERVICE 1 -->
+
+        <div class="service-card">
+
+            <h3>Computer Repairs</h3>
+
+            <p>
+                Fast and reliable computer troubleshooting, maintenance,
+                upgrades, and hardware repairs for laptops and desktop PCs.
+            </p>
+
+        </div>
+
+        <!-- SERVICE 2 -->
+
+        <div class="service-card">
+
+            <h3>Software Installation</h3>
+
+            <p>
+                Professional installation and configuration of operating systems,
+                applications, antivirus software, and productivity tools.
+            </p>
+
+        </div>
+
+        <!-- SERVICE 3 -->
+
+        <div class="service-card">
+
+            <h3>Network Setup</h3>
+
+            <p>
+                Secure Wi-Fi installation, router configuration,
+                and network troubleshooting for homes and businesses.
+            </p>
+
+        </div>
+
+        <!-- SERVICE 4 -->
+
+        <div class="service-card">
+
+            <h3>Website Development</h3>
+
+            <p>
+                Modern and responsive websites designed to help businesses
+                build a strong online presence.
+            </p>
+
+        </div>
+
+        <!-- SERVICE 5 -->
+
+        <div class="service-card">
+
+            <h3>Technical Support</h3>
+
+            <p>
+                Ongoing IT assistance and support for software,
+                hardware, internet connectivity, and digital systems.
+            </p>
+
+        </div>
+
+        <!-- SERVICE 6 -->
+
+        <div class="service-card">
+
+            <h3>Cyber Security</h3>
+
+            <p>
+                Protection against viruses, malware, phishing,
+                and online security threats through modern security solutions.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section class="about-section">
+
+    <h2>Why Choose Tech Warriors?</h2>
+
+    <div class="values-container">
+
+        <div class="value-box">
+
+            <h3>Affordable Pricing</h3>
+
+            <p>
+                Quality IT services at prices suitable for students and businesses.
+            </p>
+
+        </div>
+
+        <div class="value-box">
+
+            <h3>Professional Service</h3>
+
+            <p>
+                Reliable and professional support with customer satisfaction.
+            </p>
+
+        </div>
+
+        <div class="value-box">
+
+            <h3>Fast Response</h3>
+
+            <p>
+                Quick assistance and efficient service delivery.
+            </p>
+
+        </div>
+
+        <div class="value-box">
+
+            <h3>Trusted Solutions</h3>
+
+            <p>
+                Modern technology solutions tailored to your needs.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        © 2026 Tech Warriors |
+        Affordable IT Solutions for Everyone
+    </p>
+
+    <p>
+        Facebook | WhatsApp | Instagram
+    </p>
+
 </footer>
 
 </body>
+
 </html>

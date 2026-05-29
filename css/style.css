@@ -1,0 +1,361 @@
+/* =========================
+   TECH WARRIORS STYLE SHEET
+   ========================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+    line-height: 1.6;
+}
+
+header{
+    background-color: #111827;
+    color: white;
+    padding: 20px;
+}
+
+.logo{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color: #60a5fa;
+}
+
+.active{
+    color: #60a5fa;
+}
+
+.hero-about{
+    background-color: #2563eb;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-about h1{
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.about-section{
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.about-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.about-card{
+    background-color: white;
+    width: 400px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.values-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.value-box{
+    background-color: white;
+    width: 220px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+footer{
+    background-color: #111827;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px){
+
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-about h1{
+        font-size: 2rem;
+    }
+
+    .about-card,
+    .value-box{
+        width: 100%;
+    }
+
+}
+
+/* =========================
+   SERVICES PAGE
+   ========================= */
+
+.services-section{
+    padding: 60px 10%;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.services-section h2{
+    margin-bottom: 40px;
+    color: #111827;
+    font-size: 2rem;
+}
+
+/* SERVICES CONTAINER */
+
+.services-container{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* SERVICE CARD */
+
+.service-card{
+    background-color: white;
+    width: 320px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.service-card:hover{
+    transform: translateY(-8px);
+}
+
+/* SERVICE TITLE */
+
+.service-card h3{
+    color: #2563eb;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+/* SERVICE TEXT */
+
+.service-card p{
+    color: #444;
+    line-height: 1.7;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px){
+
+    .services-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card{
+        width: 100%;
+    }
+
+}
+
+/* =========================
+   HOME PAGE
+   ========================= */
+
+/* HERO SECTION */
+
+.hero-home{
+    background: linear-gradient(rgba(17,24,39,0.7),
+                rgba(17,24,39,0.7)),
+                url("../images/tech-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+    text-align: center;
+
+    padding: 120px 20px;
+}
+
+.hero-home h1{
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-home p{
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+/* BUTTON */
+
+.btn{
+    display: inline-block;
+
+    background-color: #2563eb;
+    color: white;
+
+    padding: 14px 30px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background-color: #1d4ed8;
+}
+
+/* SECTION TITLE */
+
+.section-title{
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #111827;
+}
+
+/* SERVICES GRID */
+
+.services-grid{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* SERVICE CARDS */
+
+.service-card{
+    background-color: white;
+
+    width: 280px;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+    transition: 0.3s;
+}
+
+.service-card:hover{
+    transform: translateY(-8px);
+}
+
+.service-card h3{
+    margin-bottom: 15px;
+    color: #2563eb;
+}
+
+/* TEXT CENTER */
+
+.text-center{
+    text-align: center;
+}
+
+/* MARGIN TOP */
+
+.mt-2{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px){
+
+    .hero-home h1{
+        font-size: 2.3rem;
+    }
+
+    .hero-home p{
+        font-size: 1rem;
+    }
+
+    .services-grid{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card{
+        width: 100%;
+    }
+
+}
+/* =========================
+   IMAGE SECTIONS
+   ========================= */
+
+.image-section{
+    width: 100%;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+}
+
+.image-section img{
+    width: 90%;
+    max-width: 1100px;
+    height: auto;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+    transition: 0.3s;
+}
+
+.image-section img:hover{
+    transform: scale(1.01);
+}
+
+/* RESPONSIVE IMAGES */
+
+@media (max-width: 768px){
+
+    .image-section img{
+        width: 100%;
+    }
+
+}
