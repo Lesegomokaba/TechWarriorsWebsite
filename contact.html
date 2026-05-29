@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <style>
-        /* BACKGROUND IMAGE ADDED - Person typing on laptop and on a call (customer support / IT professional scene) */
+        
         body {
             margin: 0;
             padding: 0;
@@ -25,7 +25,7 @@
             position: relative;
         }
 
-        /* Semi-transparent overlay for text readability - does NOT change any original styles or content */
+        /* Semi-transparent 
         body::before {
             content: "";
             position: fixed;
@@ -37,18 +37,15 @@
             z-index: -1;
         }
 
-        /* Ensures all original content remains visible above background - no style changes */
         header, section, footer, .hero-about, .about-section, .about-container, .about-card, .logo, nav, ul, li, a, h1, h2, h3, p, div {
             position: relative;
             z-index: 1;
         }
 
-        /* MAKE ALL FONT WHITE IN EVERY SECTION EXCEPT email and phone number labels and values */
         body, header, section, footer, .hero-about, .about-section, .about-container, .logo, nav, ul, li, a, h1, h2, h3, div {
             color: #ffffff !important;
         }
 
-        /* Keep links white with hover effect */
         a {
             color: #ffffff !important;
             text-decoration: none;
@@ -64,7 +61,6 @@
             font-weight: bold;
         }
 
-        /* Make Email Address heading (h3) and Phone Number heading (h3) inside about-card BLACK */
         .about-card h3 {
             color: #000000 !important;
             background-color: rgba(255, 255, 255, 0.85);
@@ -75,7 +71,7 @@
             margin-bottom: 12px;
         }
 
-        /* Make email and phone number values (paragraphs) BLACK */
+
         .about-card p {
             color: #000000 !important;
             background-color: rgba(255, 255, 255, 0.85);
@@ -85,7 +81,6 @@
             font-weight: bold;
         }
 
-        /* Download button for the background image - discreet link at bottom right */
         .bg-download-link {
             position: fixed;
             bottom: 15px;
