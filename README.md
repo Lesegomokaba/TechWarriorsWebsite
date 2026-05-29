@@ -27,7 +27,7 @@ The website consists of the following pages:
   Explains the purpose of the business and who it serves.
 
 - **Services (services.html)**  
-  Lists services including:
+  List services including:
   - Computer Repairs  
   - Software Installation  
   - Network Setup  
@@ -40,6 +40,215 @@ The website consists of the following pages:
   Displays contact information:
   - Email: techwarri@gmail.za  
   - Phone: 0742107161
+# Tech Warriors IT Solutions
+
+## Student Information
+
+- Student Name: ______________________
+- Student Number: ____________________
+- Module: ____________________________
+- Lecturer: __________________________
+- Submission Date: ___________________
+
+---
+
+# Project Title
+
+Tech Warriors IT Solutions Website
+
+---
+
+# Project Overview
+
+Tech Warriors IT Solutions is a professional multi-page responsive website
+developed to provide affordable and reliable IT services for students,
+households, and small businesses across South Africa.
+
+The website was created using pure HTML5 and CSS3 without JavaScript,
+focusing on responsive design, accessibility, professional layout,
+and modern user interface principles.
+
+---
+
+# Purpose of the Website
+
+The purpose of this website is to:
+
+- Promote Tech Warriors IT services
+- Provide information about the company
+- Showcase available services
+- Allow customers to submit enquiries
+- Provide contact information
+- Create a professional online presence
+
+---
+
+# Technologies Used
+
+The following technologies were used:
+
+- HTML5
+- CSS3
+- GitHub
+- Visual Studio Code
+
+---
+
+# Website Pages
+
+## 1. Home Page
+
+The Home page introduces the company and highlights the main services
+provided by Tech Warriors IT Solutions.
+
+### Features:
+- Hero section
+- Company introduction
+- Service cards
+- Call-to-action button
+- Responsive layout
+- Background image
+
+---
+
+## 2. About Page
+
+The About page explains the company's mission, vision,
+history, and core values.
+
+### Features:
+- Mission & Vision section
+- Company information
+- Core values cards
+- Responsive design
+- Professional imagery
+
+---
+
+## 3. Services Page
+
+The Services page displays all services offered by the company.
+
+### Features:
+- Service cards
+- Detailed service descriptions
+- Responsive grid layout
+- Professional design styling
+
+---
+
+## 4. Enquiry Page
+
+The Enquiry page allows users to contact the business
+through a professional enquiry form.
+
+### Features:
+- Input fields
+- Dropdown menu
+- Text area
+- Validation attributes
+- Submit button
+- Responsive form layout
+
+---
+
+## 5. Contact Page
+
+The Contact page provides company contact information.
+
+### Features:
+- Email information
+- Phone number
+- Social media information
+- Professional layout
+
+---
+
+# Responsive Design
+
+The website was developed using responsive web design principles
+to ensure compatibility across:
+
+- Desktop devices
+- Tablets
+- Mobile phones
+
+Media queries were used to:
+- Resize layouts
+- Adjust typography
+- Improve navigation
+- Optimize images
+
+---
+
+# CSS Features Implemented
+
+The following CSS features were implemented:
+
+- Flexbox layouts
+- Responsive design
+- Hover effects
+- Box shadows
+- Border radius styling
+- Background images
+- Navigation styling
+- Button styling
+- Media queries
+- Consistent colour palette
+
+---
+
+# SEO Features
+
+The following SEO techniques were implemented:
+
+- Meta viewport tags
+- Meta descriptions
+- Keywords meta tags
+- Proper heading hierarchy
+- Alt text for images
+- Semantic HTML structure
+- Descriptive page titles
+
+---
+
+# Accessibility Features
+
+The following accessibility practices were implemented:
+
+- Alt text on images
+- Clear navigation structure
+- Proper labels on forms
+- Readable typography
+- Responsive layouts
+- Semantic HTML tags
+
+---
+
+# Folder Structure
+
+```text
+Tech-Warriors-Project/
+│
+├── index.html
+├── about.html
+├── services.html
+├── enquiry.html
+├── contact.html
+│
+├── css/
+│   └── style.css
+│
+├── images/
+│   ├── home-tech.jpg
+│   ├── about-team.jpg
+│   ├── services-it.jpg
+│   ├── enquiry-support.jpg
+│   └── contact-office.jpg
+│
+├── README.md
+├── CHANGELOG.txt
+└── references.txt
  
   - References
 Anon., 2025. Synthesis. [Online] 
