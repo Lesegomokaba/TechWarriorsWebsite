@@ -6,7 +6,7 @@
     <title>Tech Warriors IT - Professional IT Solutions</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* Additional inline styles to add background image (person entering computer room) without changing original content/structure */
+        /* Additional inline styles  */
         body {
             margin: 0;
             padding: 0;
@@ -18,7 +18,7 @@
             position: relative;
         }
 
-        /* semi-transparent overlay to ensure text readability while background shows through — does NOT alter any existing elements, only adds layer */
+        /* semi-transparent overlay to ensure text readability while background shows through */
         body::before {
             content: "";
             position: fixed;
@@ -30,14 +30,13 @@
             z-index: -1;
         }
 
-        /* ensure all original content remains above background, no style changes to any original class or layout */
         header, main, footer, .hero-home, .services-section, .services-grid, .service-card, .text-center, .btn, .logo, nav, ul, li, a, h1, h2, h3, p {
-            /* No style properties changed — only background inheritance but keeping everything identical */
+          
             position: relative;
             z-index: 1;
         }
 
-        /* Download button for the background image - appears as a small discreet link, does not alter any original layout or content */
+        
         .bg-download-link {
             position: fixed;
             bottom: 15px;
@@ -60,9 +59,7 @@
             color: #ffaa00;
         }
 
-        /* preserve original design (exactly as in file), no modifications to colors, spacing, fonts, etc.
-           The background image is added without touching any existing CSS rules. */
-    </style>
+        
 </head>
 <body>
 
