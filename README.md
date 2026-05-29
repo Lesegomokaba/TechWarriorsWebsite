@@ -86,12 +86,12 @@ For Part 2, I added an external CSS stylesheet (`style.css`) to style the entire
 ### Responsive Design
 
 #### Breakpoints Used
-| Device | Breakpoint | Layout Changes |
-|--------|------------|----------------|
-| Desktop | 1024px and above | 4-column services grid, horizontal navigation |
-| Tablet | 768px – 1023px | 2-column services grid, stacked navigation |
-| Mobile | 480px – 767px | 1-column layout, hamburger-style stacked menu |
+| Device ![Uploading Screenshot 2026-05-29 220537.png…]()
 
+|--------|------------|----------------|
+| Desktop <img width="1661" height="992" alt="Screenshot 2026-05-29 223844" src="https://github.com/user-attachments/assets/9bc2a0ff-92b6-43c9-a63b-094a528547c2" /> 
+| Tablet <img width="1369" height="1008" alt="Screenshot 2026-05-29 215912" src="https://github.com/user-attachments/assets/93bbc6ad-04d8-46ea-8ae8-883be0cb8291" />
+  |Mobile img width="1361" height="997" alt="Screenshot 2026-05-29 215809" src="https://github.com/user-attachments/assets/9ba0035d-e546-422f-9721-82fc1c3c0911" />
 #### Responsive Adjustments
 
 | Element | Desktop | Tablet | Mobile |
