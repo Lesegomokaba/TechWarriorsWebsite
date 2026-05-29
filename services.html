@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <style>
-        /* BACKGROUND IMAGE ADDED (person assisting someone) - NO OTHER CONTENT CHANGES */
+        
         body {
             margin: 0;
             padding: 0;
@@ -26,7 +26,7 @@
             position: relative;
         }
 
-        /* Semi-transparent overlay for text readability - does NOT change any original styles or content */
+    
         body::before {
             content: "";
             position: fixed;
@@ -38,13 +38,10 @@
             z-index: -1;
         }
 
-        /* Ensures all original content remains visible above background - no style changes */
         header, section, footer, .hero-about, .services-section, .services-container, .service-card, .about-section, .values-container, .value-box, .logo, nav, ul, li, a, h1, h2, h3, p, div {
             position: relative;
             z-index: 1;
         }
-
-        /* Download button for background image - appears as a small discreet link, does not alter any original layout or content */
         .bg-download-link {
             position: fixed;
             bottom: 15px;
