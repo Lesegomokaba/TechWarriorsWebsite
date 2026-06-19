@@ -2,19 +2,18 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <!-- Responsive Design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Tech Warriors offers professional computer repairs, software installation, network setup, website development, technical support, and cyber security services in Limpopo.">
+    <meta name="keywords" content="Tech Warriors, IT Services, Computer Repairs, Software Installation, Network Setup, Website Development, Cyber Security, Limpopo">
+    <meta name="author" content="Lesego Mokaba">
+    <meta name="robots" content="index, follow">
     <title>Tech Warriors - Our Services</title>
 
     <!-- External CSS -->
     <link rel="stylesheet" href="css/style.css">
 
     <style>
-        
         body {
             margin: 0;
             padding: 0;
@@ -24,9 +23,11 @@
             background-position: center center;
             background-repeat: no-repeat;
             position: relative;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
         }
 
-    
+        /* Semi-transparent overlay for text readability */
         body::before {
             content: "";
             position: fixed;
@@ -34,14 +35,190 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.65);
+            background-color: rgba(7, 27, 59, 0.80);
             z-index: -1;
         }
 
+        /* Ensures all original content remains visible above background */
         header, section, footer, .hero-about, .services-section, .services-container, .service-card, .about-section, .values-container, .value-box, .logo, nav, ul, li, a, h1, h2, h3, p, div {
             position: relative;
             z-index: 1;
         }
+
+        /* Navigation Styles */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: #ffffff !important;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #90CAF9 !important;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        nav ul li a.active {
+            color: #ffffff !important;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+           background: rgba(13, 71, 161, 0.85);
+            backdrop-filter: blur(4px);
+        }
+
+        .logo h1 {
+            margin: 0;
+            color: #ffffff;
+        }
+        .logo p {
+            margin: 0;
+            color: #ffffff;
+            font-size: 0.9rem;
+        }
+
+        .hero-about {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero-about h1 {
+            font-size: 2.5rem;
+            color: #ffffff;
+        }
+
+        .hero-about p {
+            font-size: 1.1rem;
+            color: #ffffff;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .services-section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .services-section h2 {
+            color: #ffffff;
+            font-size: 2rem;
+        }
+
+        #serviceSearch {
+            padding: 12px 20px;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 30px;
+            border: 2px solid #1E88E5;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            font-size: 1rem;
+            margin-bottom: 30px;
+        }
+         
+        #serviceSearch:focus {
+    outline: none;
+    border-color: #90CAF9;
+    box-shadow: 0 0 12px rgba(144, 202, 249, 0.5);
+    }
+        #serviceSearch::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+             background: rgba(13, 71, 161, 0.25);
+            backdrop-filter: blur(6px);
+            padding: 25px;
+            border-radius: 20px;
+            border: 1px solid rgba(144, 202, 249, 0.4);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            background: rgba(30, 136, 229, 0.25);
+
+        }
+
+        .service-card h3 {
+            color: #90CAF9;
+            margin-top: 0;
+        }
+
+        .service-card p {
+            color: #ffffff;
+        }
+
+        .about-section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .about-section h2 {
+            color: #ffffff;
+            font-size: 2rem;
+        }
+
+        .values-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .value-box {
+            background: rgba(13, 71, 161, 0.20);
+            backdrop-filter: blur(4px);
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid rgba(144, 202, 249, 0.3);
+        }
+
+        .value-box h3 {
+            color: #90CAF9;
+        }
+
+        .value-box p {
+            color: #ffffff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(13, 71, 161, 0.85);
+            backdrop-filter: blur(4px);
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            color: #ffffff;
+        }
+
         .bg-download-link {
             position: fixed;
             bottom: 15px;
@@ -61,7 +238,7 @@
         }
         .bg-download-link:hover {
             background: rgba(0,0,0,0.9);
-            color: #ffaa00;
+            color: #90CAF9 !important;
         }
     </style>
 
@@ -69,210 +246,119 @@
 
 <body>
 
-<!-- ================= HEADER ================= -->
-
+<!-- HEADER -->
 <header>
-
     <div class="logo">
-
         <h1>Tech Warriors</h1>
-
         <p>Affordable & Reliable IT Solutions</p>
-
     </div>
 
-    <!-- Navigation -->
-
     <nav>
-
         <ul>
-
             <li><a href="index.html">Home</a></li>
-
             <li><a href="about.html">About</a></li>
-
             <li><a href="services.html" class="active">Services</a></li>
-
             <li><a href="enquiry.html">Enquiry</a></li>
-
             <li><a href="contact.html">Contact</a></li>
-
         </ul>
-
     </nav>
-
 </header>
 
-<!-- ================= HERO SECTION ================= -->
-
+<!-- HERO SECTION -->
 <section class="hero-about">
-
     <h1>Our Premium Services</h1>
-
-    <p>
-        Professional technology services designed to help students,
-        businesses, and households succeed in the digital world.
-    </p>
-
+    <p>Professional technology services designed to help students, businesses, and households succeed in the digital world.</p>
 </section>
 
-<!-- ================= SERVICES SECTION ================= -->
-
+<!-- SERVICES SECTION -->
 <section class="services-section">
-
+    <input type="text" id="serviceSearch" placeholder="🔍 Search services...">
     <h2>What We Offer</h2>
 
-    <div class="services-container">
-
+    <div class="services-container" id="servicesContainer">
         <!-- SERVICE 1 -->
-
         <div class="service-card">
-
             <h3>Computer Repairs</h3>
-
-            <p>
-                Fast and reliable computer troubleshooting, maintenance,
-                upgrades, and hardware repairs for laptops and desktop PCs.
-            </p>
-
+            <p>Fast and reliable computer troubleshooting, maintenance, upgrades, and hardware repairs for laptops and desktop PCs.</p>
         </div>
 
         <!-- SERVICE 2 -->
-
         <div class="service-card">
-
             <h3>Software Installation</h3>
-
-            <p>
-                Professional installation and configuration of operating systems,
-                applications, antivirus software, and productivity tools.
-            </p>
-
+            <p>Professional installation and configuration of operating systems, applications, antivirus software, and productivity tools.</p>
         </div>
 
         <!-- SERVICE 3 -->
-
         <div class="service-card">
-
             <h3>Network Setup</h3>
-
-            <p>
-                Secure Wi-Fi installation, router configuration,
-                and network troubleshooting for homes and businesses.
-            </p>
-
+            <p>Secure Wi-Fi installation, router configuration, and network troubleshooting for homes and businesses.</p>
         </div>
 
         <!-- SERVICE 4 -->
-
         <div class="service-card">
-
             <h3>Website Development</h3>
-
-            <p>
-                Modern and responsive websites designed to help businesses
-                build a strong online presence.
-            </p>
-
+            <p>Modern and responsive websites designed to help businesses build a strong online presence.</p>
         </div>
 
         <!-- SERVICE 5 -->
-
         <div class="service-card">
-
             <h3>Technical Support</h3>
-
-            <p>
-                Ongoing IT assistance and support for software,
-                hardware, internet connectivity, and digital systems.
-            </p>
-
+            <p>Ongoing IT assistance and support for software, hardware, internet connectivity, and digital systems.</p>
         </div>
 
         <!-- SERVICE 6 -->
-
         <div class="service-card">
-
             <h3>Cyber Security</h3>
-
-            <p>
-                Protection against viruses, malware, phishing,
-                and online security threats through modern security solutions.
-            </p>
-
+            <p>Protection against viruses, malware, phishing, and online security threats through modern security solutions.</p>
         </div>
-
     </div>
-
 </section>
 
-<!-- ================= WHY CHOOSE US ================= -->
-
+<!-- WHY CHOOSE US -->
 <section class="about-section">
-
     <h2>Why Choose Tech Warriors?</h2>
-
     <div class="values-container">
-
         <div class="value-box">
-
             <h3>Affordable Pricing</h3>
-
-            <p>
-                Quality IT services at prices suitable for students and businesses.
-            </p>
-
+            <p>Quality IT services at prices suitable for students and businesses.</p>
         </div>
-
         <div class="value-box">
-
             <h3>Professional Service</h3>
-
-            <p>
-                Reliable and professional support with customer satisfaction.
-            </p>
-
+            <p>Reliable and professional support with customer satisfaction.</p>
         </div>
-
         <div class="value-box">
-
             <h3>Fast Response</h3>
-
-            <p>
-                Quick assistance and efficient service delivery.
-            </p>
-
+            <p>Quick assistance and efficient service delivery.</p>
         </div>
-
         <div class="value-box">
-
             <h3>Trusted Solutions</h3>
-
-            <p>
-                Modern technology solutions tailored to your needs.
-            </p>
-
+            <p>Modern technology solutions tailored to your needs.</p>
         </div>
-
     </div>
-
 </section>
 
-<!-- ================= FOOTER ================= -->
-
+<!-- FOOTER -->
 <footer>
-
-    <p>
-        © 2026 Tech Warriors |
-        Affordable IT Solutions for Everyone
-    </p>
-
-    <p>
-        Facebook | WhatsApp | Instagram
-    </p>
-
+    <p>&copy; 2026 Tech Warriors | Affordable IT Solutions for Everyone</p>
+    <p>Facebook | WhatsApp | Instagram</p>
 </footer>
 
-</body>
+<!-- SEARCH FUNCTIONALITY -->
+<script>
+    document.getElementById('serviceSearch').addEventListener('keyup', function() {
+        let filter = this.value.toLowerCase();
+        let cards = document.querySelectorAll('.service-card');
+        
+        cards.forEach(function(card) {
+            let text = card.textContent.toLowerCase();
+            if (text.includes(filter)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+</script>
 
+</body>
 </html>

@@ -26,7 +26,7 @@ The website consists of the following pages:
 - **About (about.html)**  
   Explains the purpose of the business and who it serves.
 
-- **Services (services.html)**  
+- Services (services.html)  
   Lists services including:
   - Computer Repairs  
   - Software Installation  
@@ -39,9 +39,20 @@ The website consists of the following pages:
 - **Contact (contact.html)**  
   Displays contact information:
   - Email: techwarri@gmail.za  
-  - Phone: 0742107161
- 
-  - References
+  - Phone: 0742107161  
+
+### Technologies Used
+- **HTML** – Structure of the website  
+- **GitHub** – Version control and project management
+
+Fix Feedback from Part 2
+Version 3.0
+- Fixed mobile navigation menu
+- Improved responsive images
+- Updated colour contrast for accessibility
+- Added SEO meta tags
+References
+
 Anon., 2025. Synthesis. [Online] 
 Available at: https://www.synthesis.co.za/#:~:text=A%20South%20African%20software%20development%20company%20that,Intelligent%20Software%20Partner%20Award:%20ICT%20Awards%20Africa
 [Accessed 2 April 2026].
@@ -52,8 +63,3 @@ Anon., 2026. Indeed. [Online]
 Available at: https://www.indeed.com/career-advice/career-development/types-of-charitable-foundations
 [Accessed 6 April 2026].
 
-
-
-### Technologies Used
-- **HTML** – Structure of the website  
-- **GitHub** – Version control and project management

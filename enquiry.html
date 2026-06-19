@@ -2,19 +2,18 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <!-- Responsive Design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Send an enquiry to Tech Warriors for professional IT support, computer repairs, networking, and website development services in Limpopo.">
+    <meta name="keywords" content="Tech Warriors, Enquiry, IT Support, Computer Repairs, Networking, Website Development, Limpopo">
+    <meta name="author" content="Lesego Mokaba">
+    <meta name="robots" content="index, follow">
     <title>Enquiry | Tech Warriors IT Solutions</title>
 
     <!-- External CSS -->
     <link rel="stylesheet" href="css/style.css">
 
     <style>
-        /* BACKGROUND IMAGE ADDED - Person filling out a form (enquiry/application scene) */
         body {
             margin: 0;
             padding: 0;
@@ -24,9 +23,10 @@
             background-position: center center;
             background-repeat: no-repeat;
             position: relative;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
-        /* Semi-transparent overlay for readability - does NOT change any original styles or content */
+        /* Semi-transparent overlay */
         body::before {
             content: "";
             position: fixed;
@@ -34,50 +34,229 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
+           background-color: rgba(7, 27, 59, 0.80);
             z-index: -1;
         }
 
-        /* Ensures all original content remains visible above background - no style changes */
         header, main, section, footer, .hero-about, .enquiry-section, .form-container, .form-info, .form-box, .logo, nav, ul, li, a, h1, h2, h3, p, label, input, select, textarea, button, .btn, .checkbox-area {
             position: relative;
             z-index: 1;
         }
 
-        /* MAKE ALL TEXT WHITE ACROSS ALL SECTIONS - no other changes */
         body, header, main, section, footer, .hero-about, .enquiry-section, .form-container, .form-info, .form-box, .logo, nav, ul, li, a, h1, h2, h3, p, label, .checkbox-area, .form-info ul li, .form-info p, .form-info h2, .form-info h3, .form-box h2, footer p {
             color: #ffffff !important;
         }
 
-        /* Keep links white but maintain any hover effects if they exist */
         a {
             color: #ffffff !important;
         }
 
-        /* Style input fields, select, textarea to have white text but keep background readable */
-        input, select, textarea {
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li a {
             color: #ffffff !important;
-            background-color: rgba(50, 50, 50, 0.8);
-            border: 1px solid rgba(255,255,255,0.3);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 25px;
+            transition: 0.3s;
         }
 
-        /* Style placeholder text to be slightly lighter white */
-        input::placeholder, textarea::placeholder {
-            color: rgba(255,255,255,0.7) !important;
+        nav ul li a:hover {
+            color:  #90CAF9 !important;
+            background: rgba(255, 255, 255, 0.1);
         }
 
-        /* Keep button text white */
-        button, .btn {
-            color: #ffffff !important;
-        }
-
-        /* Keep active navigation link style but ensure white text */
         nav ul li a.active {
             color: #ffffff !important;
             font-weight: bold;
+            background: rgba(255, 255, 255, 0.15);
         }
 
-        /* Download button for the background image - discreet link at bottom right, does not alter any original layout/content */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background: rgba(13, 71, 161, 0.85);
+            backdrop-filter: blur(4px);
+        }
+
+        .logo h1 {
+            margin: 0;
+            color: #ffffff;
+        }
+        .logo p {
+            margin: 0;
+            color: #ffffff;
+            font-size: 0.9rem;
+        }
+
+        .hero-about {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero-about h1 {
+            font-size: 2.5rem;
+            color: #ffffff;
+        }
+
+        .hero-about p {
+            font-size: 1.1rem;
+            color: #ffffff;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .enquiry-section {
+            padding: 40px 20px;
+        }
+
+        .form-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: flex-start;
+        }
+
+        .form-info {
+            flex: 1 1 300px;
+            padding: 30px;
+            background: rgba(13, 71, 161, 0.25);
+            backdrop-filter: blur(4px);
+            border-radius: 20px;
+           border: 1px solid rgba(144, 202, 249, 0.4);
+        }
+
+        .form-info h2 {
+            color: #007BFF;
+        }
+
+        .form-info h3 {
+            color: #007BFF;
+        }
+
+        .form-info ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .form-info ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
+
+        .form-info ul li::before {
+            content: "✅ ";
+        }
+
+        .form-box {
+            flex: 2 1 400px;
+            padding: 30px;
+            background: rgba(13, 71, 161, 0.25);
+            backdrop-filter: blur(4px);
+            border-radius: 20px;
+            border: 1px solid rgba(144, 202, 249, 0.4);
+        }
+
+        .form-box h2 {
+            color: #90CAF9;
+            margin-top: 0;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 10px;
+            border: 2px solid rgba(144, 202, 249, 0.4);
+            background: rgba(13, 71, 161, 0.35);
+            color: #ffffff !important;
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #90CAF9;
+            outline: none;
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: rgba(255, 255, 255, 0.6) !important;
+        }
+
+        select option {
+            background: #0D47A1;
+            color: #ffffff;
+        }
+
+        .checkbox-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .checkbox-area input {
+            width: auto;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .checkbox-area label {
+            margin: 0;
+            cursor: pointer;
+            color: #ffffff;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 14px;
+            background: #90CAF9;
+            color: #ffffff !important;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #0D47A1;
+            transform: scale(1.02);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(13, 71, 161, 0.85);
+            backdrop-filter: blur(4px);
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            color: #ffffff;
+        }
+
         .bg-download-link {
             position: fixed;
             bottom: 15px;
@@ -97,7 +276,7 @@
         }
         .bg-download-link:hover {
             background: rgba(0,0,0,0.9);
-            color: #ffaa00 !important;
+            color: #90CAF9 !important;
         }
     </style>
 
@@ -105,202 +284,110 @@
 
 <body>
 
-<!-- ================= HEADER ================= -->
-
+<!-- HEADER -->
 <header>
-
     <div class="logo">
         <h1>Tech Warriors</h1>
         <p>Affordable & Reliable IT Solutions</p>
     </div>
 
-    <!-- Navigation -->
-
     <nav>
-
         <ul>
-
             <li><a href="index.html">Home</a></li>
-
             <li><a href="about.html">About</a></li>
-
             <li><a href="services.html">Services</a></li>
-
             <li><a href="enquiry.html" class="active">Enquiry</a></li>
-
             <li><a href="contact.html">Contact</a></li>
-
         </ul>
-
     </nav>
-
 </header>
 
-<!-- ================= HERO SECTION ================= -->
-
+<!-- HERO SECTION -->
 <section class="hero-about">
-
     <h1>Customer Enquiry Form</h1>
-
-    <p>
-        Need assistance with IT support, networking, repairs, or digital solutions?
-        Send us your enquiry and our team will respond as soon as possible.
-    </p>
-
+    <p>Need assistance with IT support, networking, repairs, or digital solutions? Send us your enquiry and our team will respond as soon as possible.</p>
 </section>
 
-<!-- ================= ENQUIRY SECTION ================= -->
-
+<!-- ENQUIRY SECTION -->
 <section class="enquiry-section">
-
     <div class="form-container">
 
         <!-- LEFT SIDE -->
-
         <div class="form-info">
-
             <h2>Why Choose Tech Warriors?</h2>
-
-            <p>
-                We provide professional and affordable IT services for students,
-                households, and businesses across South Africa.
-            </p>
-
+            <p>We provide professional and affordable IT services for students, households, and businesses across South Africa.</p>
             <br>
-
             <h3>Our Services Include:</h3>
-
             <ul>
-
                 <li>Computer Repairs</li>
-
                 <li>Wi-Fi & Network Installation</li>
-
                 <li>Website Development</li>
-
                 <li>Software Installation</li>
-
                 <li>Technical Support</li>
-
                 <li>Cyber Security Assistance</li>
-
             </ul>
-
         </div>
 
         <!-- RIGHT SIDE -->
-
         <div class="form-box">
-
             <h2>Send Your Enquiry</h2>
-
-            <form action="#" method="post">
+            <form action="#" method="post" id="enquiryForm">
 
                 <!-- FULL NAME -->
-
                 <label for="fullname">Full Name</label>
-
-                <input type="text"
-                       id="fullname"
-                       name="fullname"
-                       placeholder="Enter your full name"
-                       required>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
 
                 <!-- EMAIL -->
-
                 <label for="email">Email Address</label>
-
-                <input type="email"
-                       id="email"
-                       name="email"
-                       placeholder="Enter your email address"
-                       required>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
 
                 <!-- PHONE -->
-
                 <label for="phone">Phone Number</label>
-
-                <input type="tel"
-                       id="phone"
-                       name="phone"
-                       placeholder="Enter your phone number"
-                       required>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
 
                 <!-- SERVICE -->
-
                 <label for="service">Select Service</label>
-
                 <select id="service" name="service" required>
-
                     <option value="">Choose a service</option>
-
                     <option>Computer Repair</option>
-
                     <option>Networking</option>
-
                     <option>Website Development</option>
-
                     <option>Technical Support</option>
-
                     <option>Software Installation</option>
-
                 </select>
 
                 <!-- MESSAGE -->
-
                 <label for="message">Message</label>
-
-                <textarea id="message"
-                          name="message"
-                          rows="6"
-                          placeholder="Type your enquiry here..."
-                          required></textarea>
+                <textarea id="message" name="message" rows="6" placeholder="Type your enquiry here..." required></textarea>
 
                 <!-- CHECKBOX -->
-
                 <div class="checkbox-area">
-
-                    <input type="checkbox"
-                           id="terms"
-                           required>
-
-                    <label for="terms">
-                        I agree to the terms and conditions
-                    </label>
-
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the terms and conditions</label>
                 </div>
 
                 <!-- BUTTON -->
-
-                <button type="submit" class="btn">
-                    Submit Enquiry
-                </button>
-
+                <button type="submit" class="btn">Submit Enquiry</button>
             </form>
-
         </div>
 
     </div>
-
 </section>
 
-
-
-<!-- ================= FOOTER ================= -->
-
+<!-- FOOTER -->
 <footer>
-
-    <p>
-        © 2026 Tech Warriors IT Solutions |
-        Professional Technology Services
-    </p>
-
-    <p>
-        Facebook | WhatsApp | Instagram
-    </p>
-
+    <p>&copy; 2026 Tech Warriors IT Solutions | Professional Technology Services</p>
+    <p>Facebook | WhatsApp | Instagram</p>
 </footer>
 
-</body>
+<!-- FORM VALIDATION SCRIPT -->
+<script>
+    document.getElementById('enquiryForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for your enquiry! A Tech Warriors representative will contact you within 24 hours.');
+        this.reset();
+    });
+</script>
 
+</body>
 </html>

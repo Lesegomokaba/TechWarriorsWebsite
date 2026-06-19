@@ -3,17 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <!-- Responsive Design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Contact Tech Warriors for affordable and reliable IT solutions including computer repairs, networking, software support, and technical assistance in Limpopo, South Africa.">
+    <meta name="keywords" content="Tech Warriors, Contact, IT Solutions, Computer Repairs, Networking, Software Support, Technical Support, South Africa, Limpopo">
+    <meta name="author" content="Lesego Mokaba">
+    <meta name="robots" content="index, follow">
     <title>Tech Warriors - Contact Us</title>
 
     <!-- External CSS -->
     <link rel="stylesheet" href="css/style.css">
 
     <style>
-        /* BACKGROUND IMAGE ADDED - Person typing on laptop and on a call (customer support / IT professional scene) */
         body {
             margin: 0;
             padding: 0;
@@ -23,9 +23,10 @@
             background-position: center center;
             background-repeat: no-repeat;
             position: relative;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
-        /* Semi-transparent overlay for text readability - does NOT change any original styles or content */
+        /* Semi-transparent overlay */
         body::before {
             content: "";
             position: fixed;
@@ -33,59 +34,256 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: rgba(7, 27, 59, 0.80);
             z-index: -1;
         }
 
-        /* Ensures all original content remains visible above background - no style changes */
         header, section, footer, .hero-about, .about-section, .about-container, .about-card, .logo, nav, ul, li, a, h1, h2, h3, p, div {
             position: relative;
             z-index: 1;
         }
 
-        /* MAKE ALL FONT WHITE IN EVERY SECTION EXCEPT email and phone number labels and values */
-        body, header, section, footer, .hero-about, .about-section, .about-container, .logo, nav, ul, li, a, h1, h2, h3, div {
+        body, header, section, footer, .hero-about, .about-section, .about-container, .logo, nav, ul, li, a, h1, h2, h3, p, div {
             color: #ffffff !important;
         }
 
-        /* Keep links white with hover effect */
         a {
             color: #ffffff !important;
             text-decoration: none;
         }
 
         a:hover {
-            color: #ffaa00 !important;
+            color:  #90CAF9  !important;
         }
 
-        /* Active navigation link styling */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: #ffffff !important;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #90CAF9 !important;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
         nav ul li a.active {
             color: #ffffff !important;
             font-weight: bold;
+            background: rgba(255, 255, 255, 0.15);
         }
 
-        /* Make Email Address heading (h3) and Phone Number heading (h3) inside about-card BLACK */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background: rgba(13, 71, 161, 0.85);
+            backdrop-filter: blur(4px);
+        }
+
+        .logo h1 {
+            margin: 0;
+            color: #ffffff;
+        }
+
+        .hero-about {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero-about h1 {
+            font-size: 2.5rem;
+            color: #ffffff;
+        }
+
+        .hero-about p {
+            font-size: 1.1rem;
+            color: #ffffff;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .about-section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .about-section h2 {
+            color: #ffffff;
+            font-size: 2rem;
+        }
+
+        .about-section p {
+            color: #ffffff;
+        }
+
+        .about-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .about-card {
+              background: rgba(13, 71, 161, 0.25);
+            backdrop-filter: blur(6px);
+            padding: 25px 30px;
+            border-radius: 20px;
+            min-width: 200px;
+            flex: 1 1 200px;
+            text-align: center;
+            border: 1px solid rgba(144, 202, 249, 0.4);
+        }
+
         .about-card h3 {
-            color: #000000 !important;
-            background-color: rgba(255, 255, 255, 0.85);
+            color: #FFFFFF !important;
+            background-color: #1E88E5(255, 255, 255, 0.85);
             display: inline-block;
-            padding: 5px 15px;
+            padding: 8px 18px;
             border-radius: 25px;
             font-weight: bold;
             margin-bottom: 12px;
         }
 
-        /* Make email and phone number values (paragraphs) BLACK */
         .about-card p {
-            color: #000000 !important;
-            background-color: rgba(255, 255, 255, 0.85);
+            color: #FFFFFF  !important;
+             background-color: rgba(13, 71, 161, 0.85);
             display: inline-block;
-            padding: 5px 12px;
+            padding: 8px 16px;
             border-radius: 20px;
             font-weight: bold;
         }
 
-        /* Download button for the background image - discreet link at bottom right */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .gallery img:hover {
+            transform: scale(1.03);
+            border-color: #90CAF9;
+        }
+
+        /* Lightbox */
+        #lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        #lightbox.show {
+            display: flex;
+        }
+
+        #lightboxImg {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+        }
+
+        #closeBtn {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 3rem;
+            color: #ffffff;
+            cursor: pointer;
+            transition: 0.3s;
+            background: none;
+            border: none;
+        }
+
+        #closeBtn:hover {
+            color: #90CAF9;
+            transform: rotate(90deg);
+        }
+
+        .faq-item {
+            background: rgba(13, 71, 161, 0.25);
+            padding: 15px 20px;
+            margin: 10px auto;
+            border-radius: 10px;
+            max-width: 700px;
+            border: 1px solid rgba(144, 202, 249, 0.3);
+        }
+
+        .faq-item h3 {
+            color: #90CAF9;
+            margin-top: 0;
+        }
+
+        .faq-item p {
+            color: #ffffff;
+            margin-bottom: 0;
+        }
+
+        #faqSearch {
+            padding: 12px 20px;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 30px;
+            border: 2px solid #1E88E5;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            font-size: 1rem;
+        }
+
+        #faqSearch:focus {
+    outline: none;
+    border-color: #90CAF9;
+    box-shadow: 0 0 10px rgba(144, 202, 249, 0.4);
+}
+
+        #faqSearch::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+           background: rgba(13, 71, 161, 0.85);
+           backdrop-filter: blur(4px);
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            color: #ffffff;
+        }
+
         .bg-download-link {
             position: fixed;
             bottom: 15px;
@@ -105,7 +303,7 @@
         }
         .bg-download-link:hover {
             background: rgba(0,0,0,0.9);
-            color: #ffaa00 !important;
+            color: #90CAF9  !important;
         }
     </style>
 
@@ -114,111 +312,147 @@
 <body>
 
 <header>
-
-    <div class="logo">
-        <h1>Tech Warriors</h1>
-    </div>
-
-    <!-- Navigation -->
+  <div class="logo">
+    <h1>Tech Warriors IT</h1>
+    <p>Affordable & Reliable IT Solutions</p>
+</div>
     <nav>
-
         <ul>
-
             <li><a href="index.html">Home</a></li>
-
             <li><a href="about.html">About</a></li>
-
             <li><a href="services.html">Services</a></li>
-
             <li><a href="enquiry.html">Enquiry</a></li>
-
             <li><a href="contact.html" class="active">Contact</a></li>
-
         </ul>
-
     </nav>
-
 </header>
 
 <!-- Hero Section -->
-
 <section class="hero-about">
-
     <h1>Contact Us</h1>
-
-    <p>
-        We are always ready to assist you with reliable IT solutions
-    </p>
-
+    <p>We are always ready to assist you with reliable IT solutions</p>
 </section>
 
 <!-- Contact Section -->
-
 <section class="about-section">
-
     <h2>Get In Touch</h2>
-
     <div class="about-container">
-
         <!-- Email Card -->
-
         <div class="about-card">
-
             <h3>Email Address</h3>
-
-            <p>
-                techwarri@gmail.za
-            </p>
-
+            <p>techwarri@gmail.za</p>
         </div>
-
         <!-- Phone Card -->
-
         <div class="about-card">
-
             <h3>Phone Number</h3>
-
-            <p>
-                0742107161
-            </p>
-
+            <p>0742107161</p>
         </div>
-
     </div>
-
 </section>
 
 <!-- Additional Contact Information -->
-
 <section class="about-section">
-
     <h2>Business Hours</h2>
-
     <p>Monday - Friday : 08:00 AM - 05:00 PM</p>
-
     <p>Saturday : 09:00 AM - 01:00 PM</p>
-
     <p>Sunday : Closed</p>
-
 </section>
 
+<!-- Google Maps Section -->
+<section class="about-section">
+    <h2>Our Location</h2>
+    <div style="text-align:center;">
+        <iframe
+            src="https://www.google.com/maps?q=Polokwane,Limpopo&output=embed"
+            width="100%"
+            height="400"
+            style="border:0; border-radius:15px; max-width: 1200px;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </div>
+</section>
+
+<!-- Image Gallery -->
+<section class="about-section">
+    <h2>Our Work Gallery</h2>
+    <div class="gallery">
+        <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Tech Support" onclick="openLightbox(this.src)">
+        <img src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Computer Repair" onclick="openLightbox(this.src)">
+        <img src="https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Networking" onclick="openLightbox(this.src)">
+        <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=600" alt="IT Services" onclick="openLightbox(this.src)">
+    </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox()">
+    <button id="closeBtn">&times;</button>
+    <img id="lightboxImg" src="" alt="Large Image">
+</div>
+
+<!-- FAQ Section -->
+<section class="about-section">
+    <h2>Frequently Asked Questions</h2>
+    <input type="text" id="faqSearch" placeholder="🔍 Search FAQs...">
+    <br><br>
+
+    <div class="faq-item">
+        <h3>What services do you offer?</h3>
+        <p>We offer computer repairs, networking, software installation and IT support.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Do you provide remote support?</h3>
+        <p>Yes, we can assist clients remotely where possible.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>How much do repairs cost?</h3>
+        <p>Pricing depends on the issue and device.</p>
+    </div>
+</section>
 
 <!-- Footer -->
-
 <footer>
-
-    <p>
-        © 2026 Tech Warriors IT |
-        Reliable IT Solutions
-    </p>
-
-    <p>
-        Facebook | WhatsApp | Instagram
-    </p>
-
+    <p>&copy; 2026 Tech Warriors IT | Reliable IT Solutions</p>
+    <p>Facebook | WhatsApp | Instagram</p>
 </footer>
 
+<!-- FAQ Search Script -->
+<script>
+    document.getElementById("faqSearch").addEventListener("keyup", function() {
+        let filter = this.value.toLowerCase();
+        let faqs = document.querySelectorAll(".faq-item");
+
+        faqs.forEach(function(faq) {
+            let text = faq.textContent.toLowerCase();
+            if (text.includes(filter)) {
+                faq.style.display = "block";
+            } else {
+                faq.style.display = "none";
+            }
+        });
+    });
+
+    // Lightbox functions
+    function openLightbox(src) {
+        document.getElementById('lightbox').classList.add('show');
+        document.getElementById('lightboxImg').src = src;
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('show');
+        document.body.style.overflow = '';
+    }
+
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeLightbox();
+        }
+    });
+</script>
 
 </body>
-
 </html>
