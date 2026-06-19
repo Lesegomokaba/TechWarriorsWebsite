@@ -1,4 +1,4 @@
-# WEDE5020 – PoE Part 1 & Part 2
+# WEDE5020 – PoE Part 1, Part 2, and Part 3
 ## Tech Warriors Website
 
 ### Student Information
