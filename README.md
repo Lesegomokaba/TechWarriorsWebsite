@@ -133,6 +133,36 @@ For Part 2, I added an external CSS stylesheet (`style.css`) to style the entire
 - **Media Queries** – Responsive breakpoints
 - **Google Chrome DevTools** – Testing and debugging
 
+Part 3 - JavaScript Features
+Enquiry form validation, FAQ search, image gallery lightbox, Google Maps integration, SEO optimisation, robots.txt and sitemap.xml implementation.
+Part 3 Detailed Features
+
+• Required field validation
+• Email format validation
+• Phone number validation
+• Minimum character length validation
+• Submission confirmation message
+• FAQ search and filtering
+• Image gallery lightbox
+• Google Maps location integration
+• Unique page titles
+• Meta descriptions
+• Meta keywords
+• Robots meta tags
+• robots.txt file
+• sitemap.xml file
+
+Screenshot Placeholders
+[Insert Screenshot: Desktop View]
+[Insert Screenshot: Tablet View]
+[Insert Screenshot: Mobile View]
+[Insert Screenshot: Enquiry Form Validation]
+[Insert Screenshot: FAQ Search Functionality]
+[Insert Screenshot: Image Gallery Lightbox]
+[Insert Screenshot: Google Map]
+[Insert Screenshot: SEO Meta Tags Evidence]
+
+
 ---
 
 ## References
@@ -209,6 +239,19 @@ Available at: https://www.pexels.com/
 | 2026-05-20 | v2.0 | Captured screenshot evidence of desktop, tablet, and mobile views. |
 | 2026-05-21 | v2.0 | Updated README.md with Part 2 information: CSS styling details, responsive design breakpoints, testing tools, and updated references. |
 | 2026-05-21 | v2.0 | Added Part 2 changelog entries documenting all CSS and responsive changes. |
+
+Part 3 Changelog
+
+2026-06-01 – Added JavaScript enquiry validation
+2026-06-02 – Added FAQ search functionality
+2026-06-03 – Added image gallery lightbox
+2026-06-04 – Added Google Maps integration
+2026-06-05 – Added SEO optimisation
+2026-06-06 – Created robots.txt and sitemap.xml
+2026-06-07 – Updated professional blue colour scheme
+2026-06-08 – Completed testing and validation
+
+
 
 ### Feedback Implemented from Part 1
 
