@@ -36,7 +36,7 @@ The website consists of the following pages:
   - Website Development  
 
 - **Enquiry (enquiry.html)**  
-  Contains a form where users can submit their details and message.
+  Contains a form where users can submit their details and a message.
 
 - **Contact (contact.html)**  
   Displays contact information:
@@ -210,7 +210,7 @@ Available at: https://www.pexels.com/
 | Date | Version | Description of Changes |
 |------|---------|------------------------|
 | 2026-04-02 | v1.0 | Initial project setup. Created HTML files for all 5 pages (index.html, about.html, services.html, enquiry.html, contact.html). |
-| 2026-04-03 | v1.0 | Added basic content to all pages including headings, paragraphs, and service descriptions. |
+| 2026-04-03 | v1.0 | Added basic content to all pages, including headings, paragraphs, and service descriptions. |
 | 2026-04-04 | v1.0 | Created navigation menu with functional links between all pages. |
 | 2026-04-05 | v1.0 | Added contact information (email and phone number) to contact.html. |
 | 2026-04-06 | v1.0 | Created enquiry form with input fields for name, email, phone, service selection, and message. |
@@ -228,7 +228,7 @@ Available at: https://www.pexels.com/
 | 2026-05-12 | v2.0 | Implemented typography styles: heading sizes, paragraph line-height, navigation font styling. |
 | 2026-05-13 | v2.0 | Added layout structure using CSS Grid for services section (4 columns on desktop). |
 | 2026-05-14 | v2.0 | Added Flexbox for hero section, about cards, and contact information layout. |
-| 2026-05-15 | v2.0 | Applied colour scheme and decoration: buttons with orange background, cards with semi-transparent dark background, border-radius, box-shadow. |
+| 2026-05-15 | v2.0 | Applied colour scheme and decoration: buttons with orange background, cards with semi-transparent dark background, border-radius, and box-shadow. |
 | 2026-05-16 | v2.0 | Added pseudo-classes: :hover for buttons and links, :focus for form inputs, :active for button press effects. |
 | 2026-05-17 | v2.0 | Implemented responsive design with media queries for tablet (768px) and mobile (480px). |
 | 2026-05-18 | v2.0 | Added responsive layout adjustments: services grid changes to 2 columns on tablet, 1 column on mobile. |
@@ -251,7 +251,32 @@ Part 3 Changelog
 2026-06-07 – Updated professional blue colour scheme
 2026-06-08 – Completed testing and validation
 
-
+Part 3 Screenshots 
+Homepage 
+<img width="940" height="528" alt="image" src="https://github.com/user-attachments/assets/97b7779f-7a9f-4724-91e2-a3f088d85ee6" />
+About page 
+<img width="940" height="464" alt="image" src="https://github.com/user-attachments/assets/0e359996-eb63-43bd-997f-b1bd576ccbeb" />
+ Service page
+<img width="940" height="464" alt="image" src="https://github.com/user-attachments/assets/a4ef9813-d82b-4374-be02-1ae580f34bf8" />
+ Contact page
+<img width="940" height="465" alt="image" src="https://github.com/user-attachments/assets/dec961e7-ea25-42f2-8da7-982fa060562e" />
+ Enquiry page
+ <img width="940" height="463" alt="image" src="https://github.com/user-attachments/assets/3969ceb4-bf35-4153-8f38-7f41b47de8b9" />
+Image gallery 
+ <img width="940" height="460" alt="image" src="https://github.com/user-attachments/assets/abdc6207-f398-4964-ad92-85b678d0495b" />
+Form Validation
+ <img width="940" height="459" alt="image" src="https://github.com/user-attachments/assets/03e8bc18-3394-471e-bcb8-b11c73e68837" />
+Search Function 
+ <img width="940" height="459" alt="image" src="https://github.com/user-attachments/assets/5f8154a0-d076-42fa-9cc4-16b455d6c6ba" />
+SEO Features
+<img width="940" height="93" alt="image" src="https://github.com/user-attachments/assets/434d441e-9e2a-44ea-9ec8-f504f50545c0" />
+ Mobile functionality using Samsung Galaxy A51/A71 
+<img width="940" height="550" alt="image" src="https://github.com/user-attachments/assets/f43015ea-9367-46c5-a191-1c2dfff0b0f3" />
+ screenshot of your GitHub repository
+ <img width="940" height="461" alt="image" src="https://github.com/user-attachments/assets/86ec6307-d5b0-4f96-98e9-b93d135bc53e" />
+screenshot of your live website in the browser
+ <img width="940" height="482" alt="image" src="https://github.com/user-attachments/assets/03a35c67-dfe9-4414-8f58-b6c33caf1d5f" />
+MY website link: https://lesegomokaba.github.io/TechWarriorsWebsite/
 
 ### Feedback Implemented from Part 1
 
