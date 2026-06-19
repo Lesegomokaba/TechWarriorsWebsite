@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <style>
+        
         body {
             margin: 0;
             padding: 0;
@@ -26,6 +27,7 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
+        /* Semi-transparent overlay for readability -*/
         /* Semi-transparent overlay */
         body::before {
             content: "";
@@ -38,11 +40,13 @@
             z-index: -1;
         }
 
+        /* Ensures all original content remains visible above background -*/
         header, main, section, footer, .hero-about, .enquiry-section, .form-container, .form-info, .form-box, .logo, nav, ul, li, a, h1, h2, h3, p, label, input, select, textarea, button, .btn, .checkbox-area {
             position: relative;
             z-index: 1;
         }
 
+        /* MAKE ALL TEXT WHITE ACROSS ALL SECTIONS -*/
         body, header, main, section, footer, .hero-about, .enquiry-section, .form-container, .form-info, .form-box, .logo, nav, ul, li, a, h1, h2, h3, p, label, .checkbox-area, .form-info ul li, .form-info p, .form-info h2, .form-info h3, .form-box h2, footer p {
             color: #ffffff !important;
         }
@@ -51,6 +55,7 @@
             color: #ffffff !important;
         }
 
+        /* Style input fields, select, textarea to have white text */
         nav ul {
             list-style: none;
             display: flex;
@@ -257,6 +262,7 @@
             color: #ffffff;
         }
 
+                .bg-download-link {
         .bg-download-link {
             position: fixed;
             bottom: 15px;
@@ -389,5 +395,6 @@
     });
 </script>
 
+</html>
 </body>
 </html>
