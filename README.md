@@ -297,4 +297,4 @@ what i improved on my part 3
 | SEO Optimisation | Title tags, meta descriptions, meta keywords, alt text for images |
 | robots.txt | File to instruct search engine crawlers |
 | sitemap.xml | XML sitemap for search engines |
-| Website Deployment | Deploy on Netlify or GitHub Pages |
+| Website Deployment | Deploy on GitHub Pages |
