@@ -1,4 +1,4 @@
-# WEDE5020 – PoE Part 1 & Part 2
+# WEDE5020 – PoE Part 1, Part 2, and Part 3
 ## Tech Warriors Website
 
 ### Student Information
@@ -29,14 +29,14 @@ The website consists of the following pages:
   Explains the purpose of the business and who it serves.
 
 - **Services (services.html)**  
-  Lists services including:
+  List services including:
   - Computer Repairs  
   - Software Installation  
   - Network Setup  
   - Website Development  
 
 - **Enquiry (enquiry.html)**  
-  Contains a form where users can submit their details and message.
+  Contains a form where users can submit their details and a message.
 
 - **Contact (contact.html)**  
   Displays contact information:
