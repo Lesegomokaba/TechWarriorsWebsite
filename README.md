@@ -286,7 +286,7 @@ MY website link: https://lesegomokaba.github.io/TechWarriorsWebsite/
 
 ---
 
-### Planned Changes for Part 3
+what i improved on my part 3
 
 | Feature | Description |
 |---------|-------------|
