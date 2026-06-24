@@ -3,139 +3,819 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <!-- Responsive Design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Tech Warriors IT Solutions - Learn about our mission to provide affordable and reliable IT support to students, businesses, and households across Limpopo, South Africa.">
+    <meta name="keywords" content="Tech Warriors, About Us, IT Solutions, Computer Repairs, Limpopo, South Africa, Student IT Support">
+    <meta name="author" content="Lesego Mokaba">
+    <meta name="robots" content="index, follow">
     <title>About Us - Tech Warriors IT Solutions</title>
 
-    <!-- External CSS Link -->
+    <!-- External CSS (keep original) -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome for icons (optional but enhances) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+    <style>
+        /* ----- preserve base colors & fonts (do not change) ----- */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url('https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center center;
+            background-repeat: no-repeat;
+            position: relative;
+            color: #ffffff;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(7, 27, 59, 0.80);
+            z-index: -1;
+        }
+
+        header,
+        section,
+        footer,
+        .hero-about,
+        .about-section,
+        .about-container,
+        .about-card,
+        .logo,
+        nav,
+        ul,
+        li,
+        a,
+        h1,
+        h2,
+        h3,
+        p,
+        div {
+            position: relative;
+            z-index: 1;
+        }
+
+        a {
+            color: #ffffff !important;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color:  #90CAF9 !important;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: #ffffff !important;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color:  #90CAF9 !important;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        nav ul li a.active {
+            color: #ffffff !important;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+             background: rgba(13, 71, 161, 0.85);
+            backdrop-filter: blur(4px);
+        }
+
+        .logo h2 {
+            margin: 0;
+            color: #ffffff;
+        }
+
+        .hero-about {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero-about h1 {
+            font-size: 2.5rem;
+            color: #ffffff;
+        }
+
+        .hero-about p {
+            font-size: 1.1rem;
+            color: #ffffff;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .about-card h3 {
+            color: #000000 !important;
+            background-color: rgba(255, 255, 255, 0.85);
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .about-card p {
+            color: #000000 !important;
+            background-color: rgba(255, 255, 255, 0.85);
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        /* ----- NEW COMPONENTS (preserve colors/fonts) ----- */
+
+        /* accordion */
+        .accordion {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .accordion-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(2px);
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .accordion-header {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            color: #fff;
+            transition: 0.2s;
+        }
+
+        .accordion-header:hover {
+            background: rgba(30,136,229,0.30);
+        }
+
+        .accordion-header i {
+            transition: transform 0.3s;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+            padding: 0 20px;
+            background: rgba(0, 0, 0, 0.2);
+            color: #fff;
+        }
+
+        .accordion-content p {
+            margin: 15px 0;
+            color: #ffffff !important;
+            background: transparent !important;
+            padding: 0 !important;
+            border-radius: 0 !important;
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 200px;
+            padding: 15px 20px;
+        }
+
+        .accordion-item.active .accordion-header i {
+            transform: rotate(180deg);
+        }
+
+        /* tabs */
+        .tabs-container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(2px);
+            border-radius: 12px;
+            padding: 5px;
+        }
+
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: none;
+            padding: 14px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #ccc;
+            cursor: pointer;
+            transition: 0.3s;
+            flex: 1 1 auto;
+            border-radius: 8px 8px 0 0;
+            font-family: inherit;
+        }
+
+        .tab-btn:hover {
+            background: rgba(30,136,229,0.20);
+        }
+
+        .tab-btn.active {
+            color: #90CAF9;
+    background: rgba(30,136,229,0.25);
+    border-bottom: 3px solid #1E88E5;
+        }
+
+        .tab-panel {
+            display: none;
+            padding: 20px;
+            color: #fff;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+
+        .tab-panel p {
+            color: #ffffff !important;
+            background: transparent !important;
+            padding: 0 !important;
+            border-radius: 0 !important;
+        }
+
+        /* modal */
+        .modal-trigger {
+            background: #1E88E5;
+            color: #FFFFFF !important;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 40px;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+            font-family: inherit;
+            display: inline-block;
+            margin: 10px 0;
+        }
+
+        .modal-trigger:hover {
+            background: #0D47A1;
+            transform: scale(1.03);
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(4px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            animation: fadeIn 0.3s;
+        }
+
+        .modal-overlay.show {
+            display: flex;
+        }
+
+        .modal-box {
+            background: #0D47A1;
+            max-width: 500px;
+            width: 90%;
+            padding: 30px 25px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+            animation: slideUp 0.3s ease;
+        }
+
+        .modal-box h3 {
+            color: #90CAF9  !important;
+            margin-top: 0;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #aaa;
+            transition: 0.2s;
+            background: none;
+            border: none;
+        }
+
+        .modal-close:hover {
+            color: #1E88E5;
+            transform: rotate(90deg);
+        }
+
+        /* image slider (carousel) */
+        .slider-wrapper {
+            max-width: 700px;
+            margin: 30px auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+            position: relative;
+            background: #111;
+        }
+
+        .slider-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slider-slide {
+            min-width: 100%;
+            height: 280px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 20px;
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+            font-size: 1.4rem;
+            background-color: #222;
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 12px 16px;
+            cursor: pointer;
+            font-size: 1.5rem;
+            border-radius: 50%;
+            transition: 0.2s;
+            z-index: 5;
+            backdrop-filter: blur(2px);
+        }
+
+        .slider-btn:hover {
+            background: #007BFF;
+            color: #FFFFFF;
+        }
+
+        .slider-btn.prev {
+            left: 10px;
+        }
+
+        .slider-btn.next {
+            right: 10px;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: 0.2s;
+            border: none;
+        }
+
+        .slider-dot.active {
+            background: #90CAF9;
+            transform: scale(1.2);
+        }
+
+        /* animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.1s;
+        }
+        .delay-2 {
+            animation-delay: 0.2s;
+        }
+        .delay-3 {
+            animation-delay: 0.3s;
+        }
+
+        /* spacing */
+        .about-section {
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-2 {
+            margin-top: 20px;
+        }
+        .mb-2 {
+            margin-bottom: 20px;
+        }
+
+        /* preserve original card styles */
+        .about-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .about-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(2px);
+            padding: 20px 25px;
+            border-radius: 20px;
+            min-width: 200px;
+            flex: 1 1 200px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .value-box {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(2px);
+            padding: 16px 20px;
+            border-radius: 16px;
+            flex: 1 1 180px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .values-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .value-box h3 {
+            color: #90CAF9;
+        }
+
+        .value-box p {
+            color: #ffffff;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: rgba(13, 71, 161, 0.85);
+            backdrop-filter: blur(2px);
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            color: #ffffff;
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
+    <!-- HEADER (original) -->
+    <header>
+        <div class="logo">
+    <h1>Tech Warriors IT</h1>
+    <p>Affordable & Reliable IT Solutions</p>
+</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="logo">
-        <h2>Tech Warriors</h2>
-    </div>
+    <!-- HERO (original) -->
+    <section class="hero-about">
+        <h1>About Tech Warriors</h1>
+        <p>Empowering Limpopo through reliable and affordable IT solutions</p>
+    </section>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" class="active">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="enquiry.html">Enquiry</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-</header>
-
-<section class="hero-about">
-
-    <h1>About Tech Warriors</h1>
-
-    <p>
-        Empowering Limpopo through reliable and affordable IT solutions
-    </p>
-
-</section>
-
-<section class="about-section">
-
-    <h2>Our Mission & Vision</h2>
-
-    <div class="about-container">
-
-        <div class="about-card">
-
-            <h3>Our Mission</h3>
-
-            <p>
-                To provide affordable and reliable IT solutions to local students,
-                small businesses, and households across South Africa.
-            </p>
-
+    <!-- ====== IMAGE SLIDER (NEW) ====== -->
+    <section class="about-section">
+        <h2 class="section-title">Our Journey in Pictures</h2>
+        <div class="slider-wrapper">
+            <div class="slider-track" id="sliderTrack">
+                <div class="slider-slide" style="background-image: url('https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2');">Tech Warriors HQ</div>
+                <div class="slider-slide" style="background-image: url('https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2');">Community Support</div>
+                <div class="slider-slide" style="background-image: url('https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2');">Innovation & Growth</div>
+            </div>
+            <button class="slider-btn prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+            <div class="slider-dots" id="sliderDots"></div>
         </div>
+    </section>
 
-        <div class="about-card">
-
-            <h3>Our Vision</h3>
-
-            <p>
-                To become the most trusted technology support brand in South Africa,
-                known for excellence and integrity.
-            </p>
-
+    <!-- ====== ACCORDION FAQ (NEW) ====== -->
+    <section class="about-section">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>What areas do you serve?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>We serve clients across Limpopo and surrounding regions, with remote support available nationwide.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>Do you offer student discounts?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Yes! We provide special rates for students and educational institutions. Contact us for details.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>How quickly can you respond to a repair?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>We aim to respond within 24 hours. Emergency repairs are handled same-day where possible.</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-    </div>
-
-</section>
-
-<section class="about-section">
-
-    <h2>Who We Are</h2>
-
-    <p>
-        Tech Warriors is a growing IT solutions provider dedicated to helping
-        students, small businesses, and local households with reliable and
-        affordable technology services.
-    </p>
-
-    <p>
-        We focus on quality service, customer satisfaction, and building
-        long-term relationships with our clients.
-    </p>
-
-</section>
-
-<section class="about-section">
-
-    <h2>Our Core Values</h2>
-
-    <div class="values-container">
-
-        <div class="value-box">
-            <h3>Integrity</h3>
-            <p>Honest and transparent service always</p>
+    <!-- ====== TABS (NEW) ====== -->
+    <section class="about-section">
+        <h2 class="section-title">Why Tech Warriors?</h2>
+        <div class="tabs-container">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="tab1"><i class="fas fa-shield-alt"></i> Trust</button>
+                <button class="tab-btn" data-tab="tab2"><i class="fas fa-rocket"></i> Innovation</button>
+                <button class="tab-btn" data-tab="tab3"><i class="fas fa-users"></i> Community</button>
+            </div>
+            <div class="tab-panel active" id="tab1">
+                <p>We build lasting relationships through honest, transparent service. Our clients trust us because we deliver on our promises.</p>
+            </div>
+            <div class="tab-panel" id="tab2">
+                <p>We embrace modern technology and stay ahead of trends to provide cutting-edge solutions for students, businesses, and households.</p>
+            </div>
+            <div class="tab-panel" id="tab3">
+                <p>We are deeply rooted in local communities, supporting education and small business growth through affordable IT services.</p>
+            </div>
         </div>
+    </section>
 
-        <div class="value-box">
-            <h3>Innovation</h3>
-            <p>Staying ahead with modern solutions</p>
+    <!-- ====== MODAL POPUP (NEW) ====== -->
+    <section class="about-section text-center">
+        <button class="modal-trigger" id="openModalBtn"><i class="fas fa-star"></i> Meet Our Founder</button>
+        <div class="modal-overlay" id="modalOverlay">
+            <div class="modal-box">
+                <button class="modal-close" id="closeModalBtn">&times;</button>
+                <h3>Lesego Mokaba</h3>
+                <p>Founder & Lead Technician</p>
+                <p style="margin-top: 12px; color: #ddd !important; background: transparent !important; padding: 0 !important;">
+                    "Tech Warriors was born from a passion to bridge the digital divide in Limpopo. We believe everyone deserves access to reliable technology support."
+                </p>
+                <p style="margin-top: 8px; color: #007BFF !important; background: transparent !important; padding: 0 !important;">
+                    <i class="fas fa-certificate"></i> Certified IT Professional
+                </p>
+            </div>
         </div>
+    </section>
 
-        <div class="value-box">
-            <h3>Community</h3>
-            <p>Supporting local growth and education</p>
+    <!-- ====== ORIGINAL ABOUT CONTENT (preserved) ====== -->
+    <section class="about-section">
+        <h2>Our Mission & Vision</h2>
+        <div class="about-container">
+            <div class="about-card">
+                <h3>Our Mission</h3>
+                <p>To provide affordable and reliable IT solutions to local students, small businesses, and households across South Africa.</p>
+            </div>
+            <div class="about-card">
+                <h3>Our Vision</h3>
+                <p>To become the most trusted technology support brand in South Africa, known for excellence and integrity.</p>
+            </div>
         </div>
+    </section>
 
-        <div class="value-box">
-            <h3>Excellence</h3>
-            <p>Delivering quality in every project</p>
+    <section class="about-section">
+        <h2>Who We Are</h2>
+        <p style="max-width:700px; margin:0 auto; text-align:center; color:#fff !important; background:transparent !important; padding:0 !important;">
+            Tech Warriors is a growing IT solutions provider dedicated to helping students, small businesses, and local households with reliable and affordable technology services.
+        </p>
+        <p style="max-width:700px; margin:10px auto; text-align:center; color:#fff !important; background:transparent !important; padding:0 !important;">
+            We focus on quality service, customer satisfaction, and building long-term relationships with our clients.
+        </p>
+    </section>
+
+    <section class="about-section">
+        <h2>Our Core Values</h2>
+        <div class="values-container">
+            <div class="value-box"><h3 style="color:#90CAF9;">Integrity</h3><p>Honest and transparent service always</p></div>
+            <div class="value-box"><h3 style="color:#90CAF9;">Innovation</h3><p>Staying ahead with modern solutions</p></div>
+            <div class="value-box"><h3 style="color:#90CAF9;">Community</h3><p>Supporting local growth and education</p></div>
+            <div class="value-box"><h3 style="color:#90CAF9;">Excellence</h3><p>Delivering quality in every project</p></div>
         </div>
+    </section>
 
-    </div>
+    <!-- FOOTER (original) -->
+    <footer>
+        <p>&copy; 2026 Tech Warriors IT Solutions | Affordable & Reliable Technology Support</p>
+        <p>Facebook | WhatsApp | Instagram</p>
+    </footer>
 
-</section>
+    <!-- ====== SCRIPTS ====== -->
+    <script>
+        (function() {
+            // ----- ACCORDION -----
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const item = this.parentElement;
+                    const isActive = item.classList.contains('active');
+                    // close others
+                    document.querySelectorAll('.accordion-item').forEach(el => el.classList.remove('active'));
+                    if (!isActive) item.classList.add('active');
+                });
+            });
 
+            // ----- TABS -----
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const panels = {
+                tab1: document.getElementById('tab1'),
+                tab2: document.getElementById('tab2'),
+                tab3: document.getElementById('tab3')
+            };
 
-<footer>
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    const target = this.dataset.tab;
+                    Object.keys(panels).forEach(key => {
+                        panels[key].classList.remove('active');
+                    });
+                    if (panels[target]) panels[target].classList.add('active');
+                });
+            });
 
-    <p>
-        © 2026 Tech Warriors IT Solutions |
-        Affordable & Reliable Technology Support
-    </p>
+            // ----- MODAL -----
+            const modalOverlay = document.getElementById('modalOverlay');
+            const openModalBtn = document.getElementById('openModalBtn');
+            const closeModalBtn = document.getElementById('closeModalBtn');
 
-    <p>
-        Facebook | WhatsApp | Instagram
-    </p>
+            openModalBtn.addEventListener('click', () => {
+                modalOverlay.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            });
 
-</footer>
+            closeModalBtn.addEventListener('click', () => {
+                modalOverlay.classList.remove('show');
+                document.body.style.overflow = '';
+            });
+
+            modalOverlay.addEventListener('click', (e) => {
+                if (e.target === modalOverlay) {
+                    modalOverlay.classList.remove('show');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // ----- IMAGE SLIDER -----
+            const track = document.getElementById('sliderTrack');
+            const slides = track.querySelectorAll('.slider-slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const dotsContainer = document.getElementById('sliderDots');
+
+            let currentIndex = 0;
+            const totalSlides = slides.length;
+
+            // create dots
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('button');
+                dot.classList.add('slider-dot');
+                if (i === 0) dot.classList.add('active');
+                dot.dataset.index = i;
+                dot.addEventListener('click', function() {
+                    goTo(parseInt(this.dataset.index));
+                });
+                dotsContainer.appendChild(dot);
+            }
+            const dots = dotsContainer.querySelectorAll('.slider-dot');
+
+            function goTo(index) {
+                if (index < 0) index = totalSlides - 1;
+                if (index >= totalSlides) index = 0;
+                currentIndex = index;
+                track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+                dots.forEach((d, i) => {
+                    d.classList.toggle('active', i === currentIndex);
+                });
+            }
+
+            prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
+            nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
+
+            // auto-slide every 4s
+            let autoSlide = setInterval(() => goTo(currentIndex + 1), 4000);
+            // pause on hover
+            const sliderWrapper = document.querySelector('.slider-wrapper');
+            sliderWrapper.addEventListener('mouseenter', () => clearInterval(autoSlide));
+            sliderWrapper.addEventListener('mouseleave', () => {
+                autoSlide = setInterval(() => goTo(currentIndex + 1), 4000);
+            });
+
+            // initial
+            goTo(0);
+
+            // small animation trigger for new elements
+            document.querySelectorAll('.accordion-item, .tab-panel, .modal-box, .slider-wrapper').forEach(el => {
+                el.classList.add('fade-in');
+            });
+
+        })();
+    </script>
 
 </body>
-</html>   please a good background picture please
+</html>
